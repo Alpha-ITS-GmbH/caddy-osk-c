@@ -3,3 +3,14 @@
 	skip_install_trust
 	email info@alpha-its.de
 }
+
+osk-c.osk-kiefer.com {
+	reverse_proxy https://192.168.17.66 {
+		transport http {
+			tls
+			tls_insecure_skip_verify
+			tls_server_name osk-c.osk-kiefer.com
+		}
+	}
+}
+
