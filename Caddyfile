@@ -4,6 +4,23 @@
 	email info@alpha-its.de
 }
 
+# Security headers
+(security_headers) {
+	header {
+		# enable HSTS
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		# disable clients from sniffing the media type
+		X-Content-Type-Options "nosniff"
+		# keep referrer data off of HTTP connections
+		Referrer-Policy "strict-origin-when-cross-origin"
+		# define valid sources for loading various types of content
+		# Content-Security-Policy "default-src 'self'; frame-ancestors 'self'"
+		# XSS protection
+		X-XSS-Protection "1; mode=block"
+		# clickjacking protection
+		X-Frame-Options "SAMEORIGIN"
+	}
+}
 osk-c.osk-kiefer.com {
 encode zstd
 
