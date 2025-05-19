@@ -28,7 +28,7 @@
 osk-c.osk-kiefer.com {
 	import security_headers
 
-encode zstd
+	encode zstd
 
 	reverse_proxy https://192.168.17.66 {
 		transport http {
