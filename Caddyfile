@@ -45,17 +45,14 @@ psono-c.osk-kiefer.com {
 
 	encode zstd
 
-	########## /server  →  8081  (Präfix weg) ##########
 	handle_path /server* {
 		reverse_proxy 192.168.17.61:8081
 	}
 
-	########## /portal  →  8082  (Präfix bleibt) ##########
 	handle /portal* {
 		reverse_proxy 192.168.17.61:8082
 	}
 
-	########## Fallback  →  8083 ##########
 	handle {
 		reverse_proxy 192.168.17.61:8083
 	}
