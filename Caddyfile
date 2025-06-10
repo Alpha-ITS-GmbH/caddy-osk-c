@@ -45,15 +45,5 @@ psono-c.osk-kiefer.com {
 
 	encode zstd
 
-	handle_path /server* {
-		reverse_proxy 192.168.17.61:8081
-	}
-
-	handle /portal* {
-		reverse_proxy 192.168.17.61:8082
-	}
-
-	handle {
-		reverse_proxy 192.168.17.61:8083
-	}
+	reverse_proxy 192.168.17.31:10200
 }
