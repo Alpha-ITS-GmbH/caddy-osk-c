@@ -30,6 +30,8 @@ osk-c.osk-kiefer.com {
 
 	encode zstd
 
+	abort /meet/*
+
 	reverse_proxy https://192.168.17.66 {
 		transport http {
 			tls
